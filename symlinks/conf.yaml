@@ -1,0 +1,15 @@
+- clean: ['~']
+
+- defaults:
+    link:
+      create: true
+      force: true
+
+- link:
+    ~/.bash_profile: shell/bash/.bash_profile
+    ~/.bashrc: shell/bash/.bashrc
+    ~/.zimrc: shell/zsh/.zimrc
+    ~/.zlogin: shell/zsh/.zlogin
+    ~/.zshenv: shell/zsh/.zshenv
+    ~/.zshrc: shell/zsh/.zshrc
+    ~/.inputrc: shell/.inputrc
