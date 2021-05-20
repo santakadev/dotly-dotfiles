@@ -15,3 +15,4 @@
     ~/.inputrc: shell/.inputrc
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore: git/.gitignore
+    ~/.vimrc: vim/.vimrc
