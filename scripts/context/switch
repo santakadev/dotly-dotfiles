@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? Switch context arranges windows around displays and workspaces
+##?
+##? Usage:
+##?    switch
+docs::parse "$@"
+
+CONTEXT_SWITCH_PATH="$DOTFILES_PATH/scripts/context"
+
+result=$(cat $CONTEXT_SWITCH_PATH/switchers/switchers.txt | rofi -theme Monokai -dmenu -i -p "Switch to")
+
+switcher=$(echo $result | cut -d' ' -f2-)
+
+echo $switcher
+
+source $CONTEXT_SWITCH_PATH/switchers/$switcher

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+google-chrome --new-window www.notion.so/codelytv/db0147cf2ee6416eb930025008aab51b?v=7936e50bc4254ad4a67af0bc214a61a8 && \
+xdotool key super+Shift+Up && \
+xdotool key super+Left && 
+google-chrome --new-window meet.google.com/kig-rayq-hrz && \
+xdotool key super+Shift+Up && \
+xdotool key super+Right && \
+google-chrome --new-window calendar.google.com && \
+xdotool key super+Shift+Down && \
+xdotool key super+Up

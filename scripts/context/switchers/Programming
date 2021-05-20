@@ -1,0 +1,12 @@
+#!/bin/env bash
+
+idea &
+
+while [[ ! $(wmctrl -lx | grep jetbrains-idea.jetbrains-idea) ]]; do
+    echo "sleep"
+    sleep 1
+done
+
+sleep 3
+
+wmctrl -x -a "jetbrains-idea.jetbrains-idea" -b toggle,fullscreen

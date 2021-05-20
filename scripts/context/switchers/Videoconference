@@ -1,0 +1,7 @@
+#!/bin/env bash
+
+#xdotool key super+Down
+#wmctrl -r :ACTIVE: 
+#wmctrl -r :ACTIVE: -b toggle,maximized_horz -e 1,0,0,500,500
+xdotool key super+Down && sleep 0.1 && wmctrl -r :ACTIVE: -b toggle,maximized_horz && wmctrl -r :ACTIVE: -e 1,0,0,500,500
+#xdotool windowmove "$(xdotool getactivewindow)" 0 0 

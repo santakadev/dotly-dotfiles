@@ -1,0 +1,5 @@
+#!/bin/bash
+
+google-chrome --new-window meet.google.com/kig-rayq-hrz && \
+xdotool key super+Shift+Up && \
+xdotool key super+Up

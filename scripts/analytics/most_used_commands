@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? List most used commands
+##?
+##? Usage:
+##?    most_used_commands
+docs::parse "$@"
+
+fc -lim "*$@*" 1 | awk '{print $4}' | sort | uniq -c | sort -rn | head
