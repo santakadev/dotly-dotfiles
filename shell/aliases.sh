@@ -1,12 +1,14 @@
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Navigation
 alias ..="cd .."
 alias ...="cd ../.."
 alias ll="ls -l"
 alias la="ls -la"
 alias ~="cd ~"
 alias dotfiles="cd '$DOTFILES_PATH'"
+alias gtp="cd $PROJECTS_HOME"
 
 # Git
 alias gaa="git add -A"
