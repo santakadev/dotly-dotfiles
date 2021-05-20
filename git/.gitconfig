@@ -1,0 +1,8 @@
+[user]
+	name = Dani Santamaría
+	email = santaka87@gmail.com
+[core]
+	editor = vim
+	excludesfile = /home/dani/.gitignore
+	autocrlf = input
+
