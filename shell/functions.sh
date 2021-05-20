@@ -41,3 +41,8 @@ clone_git_repo() {
   git clone "$repo_url"
   echo "$repo_url"
 }
+
+docker_connect() {
+  containerid=$(docker ps | tail -n +2 | fzf | awk '{print $1}')
+  docker exec -it $containerid bash
+}
