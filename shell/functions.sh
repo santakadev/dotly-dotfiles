@@ -46,3 +46,14 @@ docker_connect() {
   containerid=$(docker ps | tail -n +2 | fzf | awk '{print $1}')
   docker exec -it $containerid bash
 }
+
+aws_ssh() {
+  instancePublicIp="$(ec2_instance_public_ip)"
+  xdotool key shift+F10 r 2
+  ssh -i ~/.ssh/codely.pem ubuntu@$instancePublicIp
+}
+
+ec2_instance_public_ip() {
+  local ip=$(aws ec2 describe-instances --output text --filters "Name=tag:Name,Values=*" --query "Reservations[*].Instances[*].{IP:PublicIpAddress,Name:Tags[?Key=='Name']|[0].Value}" | fzf | awk '{print $1}')
+  echo "$ip"
+}

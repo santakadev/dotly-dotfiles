@@ -35,3 +35,6 @@ alias up='dot package update_all'
 
 # Docker
 alias dcon="docker_connect"
+
+# SSH
+alias awsssh="aws_ssh"
