@@ -12,7 +12,7 @@ docs::parse "$@"
 
 CONTEXT_SWITCH_PATH="$DOTFILES_PATH/scripts/context"
 
-result=$(cat $CONTEXT_SWITCH_PATH/switchers/switchers.txt | rofi -theme Monokai -dmenu -i -p "Switch to")
+result=$(cat $CONTEXT_SWITCH_PATH/switchers/switchers.txt | rofi -theme Monokai -font "Monospace 30" -dmenu -i -p "Switch to")
 
 switcher=$(echo $result | cut -d' ' -f2-)
 

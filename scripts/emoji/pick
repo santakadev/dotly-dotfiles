@@ -26,7 +26,7 @@ function notify() {
 
 function display() {
     emoji=$(cat "$EMOJI_FILE" | grep -v '#' | grep -v '^[[:space:]]*$')
-    line=$(echo "$emoji" | rofi -theme Monokai -dmenu -i -p emoji -kb-custom-1 Ctrl+c $@)
+    line=$(echo "$emoji" | rofi -font "Monospace 30" -theme Monokai -dmenu -i -p emoji -kb-custom-1 Ctrl+c $@)
     exit_code=$?
 
     line=($line)
