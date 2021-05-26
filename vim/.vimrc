@@ -2,16 +2,22 @@ call plug#begin('~/.vim/autoload')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'morhetz/gruvbox'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
+let g:airline_theme='gruvbox'
+let g:airline_powerline_fonts = 1
+
 let mapleader = " "
 
 " Basic
 syntax on
+colorscheme gruvbox
+set background=dark
 set encoding=utf-8
 set number relativenumber
 
