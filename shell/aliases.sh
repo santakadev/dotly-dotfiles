@@ -9,6 +9,7 @@ alias la="ls -la"
 alias ~="cd ~"
 alias dotfiles="cd '$DOTFILES_PATH'"
 alias gtp="cd $PROJECTS_HOME"
+alias nnn="nnn -a"
 
 # Git
 alias gaa="git add -A"
