@@ -18,12 +18,15 @@ source "$DOTFILES_PATH/scripts/emoji/.env"
 ##?     - Ctrl+C in rofi will copy it to the clipboard.
 docs::parse "$@"
 
+EMOJI_FILE='/home/dani/emojis.txt'
+
 function notify() {
     if [ "$(command -v notify-send)" ]; then
         notify-send "$1" "$2"
     fi
 }
 
+# shellcheck disable=SC2120
 function display() {
     emoji=$(cat "$EMOJI_FILE" | grep -v '#' | grep -v '^[[:space:]]*$')
     line=$(echo "$emoji" | rofi -font "Monospace 30" -theme Monokai -dmenu -i -p emoji -kb-custom-1 Ctrl+c $@)

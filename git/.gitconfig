@@ -6,3 +6,5 @@
 	excludesfile = /home/dani/.gitignore
 	autocrlf = input
 
+[init]
+	defaultBranch = main

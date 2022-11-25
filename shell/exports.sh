@@ -1,4 +1,4 @@
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
+export JAVA_HOME='/home/dani/.jdks/corretto-17.0.2/'
 export GEM_HOME="$HOME/.gem"
 export GOPATH="$HOME/.go"
 
@@ -20,7 +20,9 @@ export path=(
   "$GEM_HOME/bin"
   "$GOPATH/bin"
   "$HOME/.cargo/bin"
+  "$HOME/.local/bin"
   "/usr/local/opt/ruby/bin"
+  "/home/dani/.gem/bin"
   "/usr/local/opt/python/libexec/bin"
   "/opt/homebrew/bin"
   "/usr/local/bin"

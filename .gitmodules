@@ -2,3 +2,8 @@
 	path = modules/dotly
 	url = https://github.com/CodelyTV/dotly.git
 	branch = master
+
+	asasdfsadf235235dasdsadsafsdf
+[submodule "scripts/emoji/download"]
+	path = scripts/emoji/download
+	url = git@github.com:santakadev/emojipedia.git

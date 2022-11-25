@@ -42,3 +42,6 @@ if [ -n "$(ls "$DOTFILES_PATH/shell/bash/completions/")" ]; then
   done
 fi
 . "$HOME/.cargo/env"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

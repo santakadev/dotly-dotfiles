@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? Move to previous commit
+##?
+##? Usage:
+##?    prev
+docs::parse "$@"
+
+GIT_PROJECT_DIR=/home/dani/Projects/refactoring-code-smells/exercises/legacy_create_video/solutions/codely_php-symfony_golden-master
+
+git -C $GIT_PROJECT_DIR reset --hard
+git -C $GIT_PROJECT_DIR clean -fd
+git -C $GIT_PROJECT_DIR checkout HEAD^1
+git -C $GIT_PROJECT_DIR reset --soft HEAD~1

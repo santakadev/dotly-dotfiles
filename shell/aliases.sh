@@ -39,3 +39,9 @@ alias dcon="docker_connect"
 
 # SSH
 alias awsssh="aws_ssh"
+
+# Vim/Nvim
+alias vim="nvim"
+
+# NPM
+alias nrun="cat package.json | jq '.scripts | keys[]' | fzf | xargs npm run"

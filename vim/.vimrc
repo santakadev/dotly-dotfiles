@@ -7,6 +7,8 @@ Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+Plug 'w0rp/ale'
+
 call plug#end()
 
 let g:airline_theme='gruvbox'
@@ -20,6 +22,7 @@ colorscheme gruvbox
 set background=dark
 set encoding=utf-8
 set number relativenumber
+set mouse=a
 
 " Indentation
 filetype plugin indent on
@@ -46,8 +49,21 @@ let g:netrw_winsize = 20
 
 
 " Key maps
-nmap <leader><C-f> :Files .<CR>
-nmap <leader><C-e> :Buffers<CR>
+#nmap <leader><C-f> :Files .<CR>
+#nmap <leader><C-e> :Buffers<CR>
+nmap <leader><C-f> :Telescope find_files<CR>
+nmap <leader><C-f> :Telescope buffers<CR>
 nmap <leader><C-g> :GFiles?<CR>
 nmap <leader><C-r> :! 
 nmap <leader>1 :Vexplore<CR>
+
+" Linting
+let g:ale_fixers = {'javascript': ['eslint']}
+ 
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+
+let g:ale_fix_on_save = 1
+
+" Language Server
+" 
