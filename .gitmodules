@@ -4,6 +4,6 @@
 	branch = master
 
 	asasdfsadf235235dasdsadsafsdf
-[submodule "scripts/emoji/download"]
-	path = scripts/emoji/download
-	url = git@github.com:santakadev/emojipedia.git
+[submodule "scripts/emoji/download-emojipedia"]
+	path = scripts/emoji/download-emojipedia
+	url = https://github.com/santakadev/emojipedia.git

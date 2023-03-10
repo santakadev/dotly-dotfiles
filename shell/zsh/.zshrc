@@ -28,5 +28,5 @@ source "$DOTFILES_PATH/shell/zsh/key-bindings.zsh"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-export VOLRTA_HOME = $HOME/.volta
-export PATH="$PATH:$VOLTA_HOME"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

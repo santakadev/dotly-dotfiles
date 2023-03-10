@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+# set -euo pipefail
 
 source "$DOTLY_PATH/scripts/core/_main.sh"
 source "$DOTFILES_PATH/scripts/emoji/.env"
@@ -18,7 +18,7 @@ source "$DOTFILES_PATH/scripts/emoji/.env"
 ##?     - Ctrl+C in rofi will copy it to the clipboard.
 docs::parse "$@"
 
-EMOJI_FILE='/home/dani/emojis.txt'
+EMOJI_FILE='/home/santaka/emojis.txt'
 
 function notify() {
     if [ "$(command -v notify-send)" ]; then
