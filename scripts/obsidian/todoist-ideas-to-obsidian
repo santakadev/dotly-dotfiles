@@ -1,0 +1,20 @@
+#!/bin/env bash
+
+todoist_project_id="2300441456"
+tasks=$(todoist tasks list --project=$todoist_project_id | jq 'map( { id, title: (if .content | length > 100 then .content[0:100] else .content end), content, created_at })')
+
+output_dir="/home/daniel/Insync/santaka87@gmail.com/Google Drive/🧠 Obsidian/PKM/✉️ Inbox"
+
+echo "$tasks" | jq -c '.[]' | while read -r line; do
+  id=$(echo "$line" | jq -r '.id')
+  title=$(echo "$line" | jq -r '.title' | tr ':' '-' | tr '/' '-')
+  content=$(echo "$line" | jq -r '.content')
+  created_at=$(echo "$line" | jq -r '.created_at')
+
+  echo $title
+  echo -e "created_at: $created_at\n\n$content" > "$output_dir/$title.md"
+
+  # TODO: use todoist tasks close "$id"
+
+  curl -sf -X POST "https://api.todoist.com/rest/v2/tasks/$id/close" -H "Authorization: Bearer $TODOIST_TOKEN"
+done
