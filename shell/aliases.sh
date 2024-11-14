@@ -45,3 +45,6 @@ alias vim="nvim"
 
 # NPM
 alias nrun="cat package.json | jq '.scripts | keys[]' | fzf | xargs npm run"
+
+# Misc
+alias todo="grep -r "TODO:" --exclude-dir=vendor --exclude-dir=node_modules . | sed -E 's|.*(TODO:)\s+?(.*)|[ ] \2|'"
