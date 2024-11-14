@@ -3,7 +3,7 @@
 todoist_project_id="2300441689"
 tasks=$(todoist tasks list --project=$todoist_project_id | jq 'map( { id, title: (if .content | length > 100 then .content[0:100] else .content end), content, created_at })')
 
-output_dir="/home/daniel/Insync/santaka87@gmail.com/Google Drive/🧠 Obsidian/PKM/✉️ Inbox"
+output_dir="$HOME/Insync/santaka87@gmail.com/🧠 Obsidian/PKM/✉️ Inbox"
 
 echo "$tasks" | jq -c '.[]' | while read -r line; do
   id=$(echo "$line" | jq -r '.id')
